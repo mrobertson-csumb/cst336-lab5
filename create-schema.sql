@@ -1,0 +1,11 @@
+DROP DATABASE IF EXISTS cst336_lab5;
+CREATE DATABASE cst336_lab5;
+
+USE cst336_lab5;
+
+CREATE TABLE favorites (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `image_url` VARCHAR(250) NOT NULL,
+    `keyword` VARCHAR(25) NOT NULL
+);
+

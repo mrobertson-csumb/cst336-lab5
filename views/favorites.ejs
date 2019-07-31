@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <% include partials/head %>
+    <%- include('partials/background', {imgUrl: imgUrl}) %>
+
+    <title>Favorites</title>
+</head>
+<body>
+<main>
+    <h1>Favorited Pictures</h1>
+    <div id="search-link">
+        <a href="/">Back to Search Page</a></div>
+    <hr/>
+    <h3>Keywords</h3>
+    <p>
+        <% rows.forEach( (row, i) => { %>
+
+            <a class="keyword"><%= row.keyword %></a>
+        <% }) %>
+    </p>
+    <hr/>
+
+    <div id="keyword-favorites" class="images-container"></div>
+</main>
+<% include partials/footer %>
+</body>
+</html>

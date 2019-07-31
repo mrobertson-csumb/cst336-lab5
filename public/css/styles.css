@@ -1,0 +1,89 @@
+body {
+
+    background: rgba(100, 100, 100, 90) no-repeat fixed center center;
+    background-size: cover;
+    text-align: center;
+
+    font-family: 'Titillium Web', sans-serif;
+    color: rgba(9, 9, 9, .75);
+    font-size: 2.5em;
+
+}
+
+input, button {
+    font-size: 1.3em;
+}
+
+main, footer {
+    background-color: rgba(0, 0, 0, .75);
+    width: 50%;
+    margin: 2% auto;
+    padding: 20px;
+    border-radius: 2em;
+}
+
+h1, h2, h3, h4, h5 {
+    color: white;
+}
+
+#fav-link,
+#search-link {
+
+    padding: 5px;
+}
+
+#fav-link > a,
+#search-link > a {
+    color: #FF7400;
+    font-size: .8em;
+}
+
+#search-form {
+    padding: 20px;
+}
+
+.result-image {
+    border-radius: 6%;
+    max-width: 100%;
+}
+
+.keyword {
+    font-size: .8em;
+    margin: 1%;
+}
+
+.images-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    max-height: 100%;
+    margin: 0 auto;
+}
+
+.images-container > .image-block {
+    margin: 1%;
+    max-width: 31%;
+}
+
+.icon-container {
+    mix-blend-mode: overlay;
+}
+
+.fav-icon {
+    margin-top: -80px;
+
+}
+
+footer {
+
+    /*filter: invert();*/
+    font-size: .8em;
+    color: white;
+    mix-blend-mode: hard-light;
+}
+
+footer img {
+    mix-blend-mode: hard-light;
+    filter: invert();
+}

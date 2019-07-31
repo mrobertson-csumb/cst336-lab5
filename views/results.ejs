@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <% include partials/head %>
+    <%- include('partials/background', {imgUrl: imgUrls[0]}) %>
+    <title>Results Page</title>
+</head>
+<body>
+<main>
+    <h1>Results Page</h1>
+    <% include partials/search_form %>
+    <% include partials/favorites_btn %>
+    <div class="images-container">
+        <% imgUrls.forEach( (it) =>  { %>
+            <div class="image-block">
+                <img class="result-image" src="<%= it %>"/>
+                <img class="fav-icon" src="img/fav_off.png" width="12.5%"/>
+            </div>
+
+        <% }) %>
+    </div>
+</main>
+<% include partials/footer %>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "cst336-lab5",
+  "version": "0.0.1",
+  "description": "urn:ietf:wg:oauth:2.0:oob",
+  "main": "app.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrobertson-csumb/cst336-lab5.git"
+  },
+  "dependencies": {
+    "ava": "^2.2.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/mrobertson-csumb/cst336-lab5/issues"
+  },
+  "homepage": "https://github.com/mrobertson-csumb/cst336-lab5#readme"
+}
