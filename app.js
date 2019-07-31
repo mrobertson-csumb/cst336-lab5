@@ -39,9 +39,7 @@ app.get('/api/keyword-favorites',
 );
 
 //// server listener
-app.listen('8081', 'localhost',
-    () => console.log('server is running...')
-);
+app.listen(process.env.PORT, () => console.log('express server is running...'));
 
 //// functions
 
