@@ -9,19 +9,25 @@ app.use(express.static('public'));
 
 //// routes
 app.get('/',
-    async (req, resp) => resp.render('index', {imgUrl: await common.getImage()})
+    async (req, resp) => resp.render('index', {
+            imgUrl: await common.getImage()
+                .catch(e => '')
+        }
+    )
 );
 
 app.get('/search',
     async (req, resp) => resp.render('results', {
-        imgUrls: await common.getImages(9, req.query.keyword),
+        imgUrls: await common.getImages(9, req.query.keyword)
+            .catch(e => []),
         keyword: req.query.keyword
     })
 );
 
 app.get('/favorites',
     async (req, resp) => resp.render('favorites', {
-        imgUrl: await common.getImage(),
+        imgUrl: await common.getImage()
+            .catch(e => ''),
         rows: await dbGetKeywords()
     })
 );
@@ -30,16 +36,16 @@ app.get('/api/update-favorites',
     (req, resp) => resp.send(dbModifyFavorites(
         req.query.img_url,
         req.query.keyword,
-        req.query.action)
-    )
+        req.query.action))
 );
 
 app.get('/api/keyword-favorites',
-    async (req, resp) => resp.send(await dbGetKeywordFavorites(req.query.keyword))
+    async (req, resp) => resp.send(await dbGetKeywordFavorites(req.query.keyword)
+        .catch(e => []))
 );
 
 //// server listener
-app.listen(process.env.PORT, () => console.log('express server is running...'));
+app.listen('33333', '127.0.0.1', () => console.log('express server is running...'));
 
 //// functions
 

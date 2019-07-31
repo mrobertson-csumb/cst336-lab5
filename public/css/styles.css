@@ -86,4 +86,5 @@ footer {
 footer img {
     mix-blend-mode: hard-light;
     filter: invert();
+    max-width: 95%;
 }
